@@ -2,4 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'virtual:uno.css'
 
-createApp(App).mount('#app')
+import './styles/index.scss'
+import router from '@/router'
+
+createApp(App).use(router).mount('#app')
