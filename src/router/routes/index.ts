@@ -1,4 +1,10 @@
+import type { RouteRecordRaw } from 'vue-router'
 import { coreRoutes } from './core'
+
+// 定义模块类型
+interface RouteModuleType {
+  default: RouteRecordRaw[]
+}
 
 const dynamicRouteFiles = import.meta.glob('./modules/**/*.ts', {
   eager: true,

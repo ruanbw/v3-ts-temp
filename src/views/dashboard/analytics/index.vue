@@ -1,14 +1,14 @@
 <script setup lang="ts">
-
+import { Button } from 'ant-design-vue'
+import { toggleDark } from '@/logics'
 </script>
 
 <template>
-  <div>
-    analytics
-    <div class="i-ep-menu" />
+  <div class="analytics">
+    <Button type="primary" @click="toggleDark">
+      toggle dark mode
+    </Button>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

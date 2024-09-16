@@ -5,11 +5,11 @@ import type { Router } from 'vue-router'
  * @param router
  */
 function setupCommonGuard(router: Router) {
-  router.beforeEach(async (to) => {
+  router.beforeEach(async (_to) => {
     return true
   })
 
-  router.afterEach((to) => {
+  router.afterEach((_to) => {
 
   })
 }
@@ -19,7 +19,7 @@ function setupCommonGuard(router: Router) {
  * @param router
  */
 function setupAccessGuard(router: Router) {
-  router.beforeEach(async (to, from) => {
+  router.beforeEach(async (_to, _from) => {
   })
 }
 
