@@ -1,10 +1,17 @@
+import { useDark } from "@vueuse/core"
+import { nextTick } from "vue"
+
 export const isDark = useDark()
+export function toggleDark(event: MouseEvent) {
+
+  viewsTransition(event)
+}
 
 /**
  * Credit to [@hooray](https://github.com/hooray)
  * @see https://github.com/vuejs/vitepress/pull/2347
  */
-export function toggleDark(event: MouseEvent) {
+export function viewsTransition(event: MouseEvent){
   // @ts-expect-error experimental API
   const isAppearanceTransition = document.startViewTransition
     && !window.matchMedia('(prefers-reduced-motion: reduce)').matches

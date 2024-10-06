@@ -1,9 +1,7 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
+// plugin
 import vue from '@vitejs/plugin-vue'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,24 +12,5 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    Components({
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      resolvers: [
-      ],
-      // dirs: ['src/components'],
-      extensions: ['vue'],
-    }),
-    AutoImport({
-      // global imports to register
-      imports: [
-        // presets
-        'vue',
-        VueRouterAutoImports,
-        'pinia',
-        '@vueuse/core',
-      ],
-      dirs: ['src/composables'],
-      dts: true,
-    }),
   ],
 })

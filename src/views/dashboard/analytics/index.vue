@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { Button } from 'ant-design-vue'
 import { toggleDark } from '@/logics'
+import { Button } from "@/components/ui/button"
+
 </script>
 
 <template>
@@ -11,4 +12,4 @@ import { toggleDark } from '@/logics'
   </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="less"></style>
